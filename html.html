@@ -1,0 +1,133 @@
+<html>
+<head>
+<style>
+center
+{
+background:grey;
+width:400px;
+height:550Px;
+font-size:20px;
+}
+body
+{
+padding-top:75px;
+padding-left:500px;
+background-image:linear-gradient(aqua,white);
+}
+h1
+{
+color:white;
+background:green;
+}
+#bt
+{
+background:blue;
+color:white;
+}
+#rs
+{
+background:red;
+color:white;
+}
+#one
+{
+display:none;
+}
+
+</style>
+<script>
+function submit()
+{
+let a,b,c,d,e,sum,avg,percentage;
+a=parseInt(document.getElementById("f").value);
+b=parseInt(document.getElementById("i").value);
+c=parseInt(document.getElementById("r").value);
+d=parseInt(document.getElementById("s").value);
+e=parseInt(document.getElementById("t").value);
+sum=a+b+c+d+e;
+avg=sum/5;
+percentage=(sum/500)*100;
+document.getElementById("total").value=sum;
+document.getElementById("sub1").value=a;
+document.getElementById("sub2").value=b;
+document.getElementById("sub3").value=c;
+document.getElementById("sub4").value=d;
+document.getElementById("sub5").value=e;
+if(a<35)
+{
+document.getElementById("g1").value="Fail";
+}
+else{
+document.getElementById("g1").value="pass";
+}
+if(b<35)
+{
+document.getElementById("g2").value="Fail";
+}
+else{
+document.getElementById("g2").value="pass";
+}
+if(c<35)
+{
+document.getElementById("g3").value="Fail";
+}
+else{
+document.getElementById("g3").value="pass";
+}
+if(d<35)
+{
+document.getElementById("g4").value="Fail";
+}
+else{
+document.getElementById("g4").value= "pass";
+}
+if(e<35)
+{
+document.getElementById("g5").value="Fail";
+}
+else{
+document.getElementById("g5").value="pass";
+}
+document.getElementById("total").value=sum;
+document.getElementById("average").value=avg;
+document.getElementById("percentage").value=percentage;
+}
+ 
+ 
+
+</script>
+</head>
+<body>
+<center>
+<form>
+<h1>Student MarkSheet</h1>
+<td>Subject1:<input type="text" id="f"  ></td><br/><br/>
+<td>Subject2:<input type="text" id="i"  ></td><br/><br/>
+<td>Subject3:<input type="text" id="r"  ></td><br/><br/>
+<td>Subject4:<input type="text" id="s"  ></td><br/><br/>
+<td>Subject5:<input type="text" id="t"></td><br/><br/>
+<button type="reset" id="rs">Reset</button>
+</form>
+<td><button onclick="submit()" id="bt">Submit</button></td><br/><br/>
+<td>Total:<input type="text" id="total"></td><br/><br/>
+ 
+<td>Average:<input type="text" id="average"></td><br/><br/>
+<td>Percentage:<input type="text" id="percentage"></td><br/><br/>
+ 
+
+</center>
+<table border="4">
+<tr>
+<th>Subject</th>
+<th>Marks</th>
+<th>Grade</th>
+</tr>
+<tr><td>Sub 1</td><td id="sub1"></td><td id="g1"></td></tr>
+<tr><td>Sub 2</td><td id="sub2"></td><td id="g2"></td></tr>
+<tr><td>Sub 3</td><td id="sub3"></td><td id="g3"></td></tr>
+<tr><td>Sub 4</td><td id="sub4"></td><td id="g4"></td></tr>
+<tr><td>Sub 5</td><td id="sub5"></td><td id="g5"></td></tr>
+</table>
+</body>
+</html>
+ 
